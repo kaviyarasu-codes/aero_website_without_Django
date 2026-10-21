@@ -1,9 +1,11 @@
 <?php
 // Database connection details
-$servername = "localhost";
-$username   = "u964291147_aeroedgemedia";
-$password   = "Aeroedge@2025";
-$dbname     = "u964291147_aeroedgemedia";
+// Credentials live in includes/config.php (not in Git). Copy config.example.php to config.php on the server.
+require __DIR__ . '/config.php';
+$servername = DB_HOST;
+$username   = DB_USER;
+$password   = DB_PASS;
+$dbname     = DB_NAME;
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
